@@ -1,0 +1,12 @@
+<div class="ratings-container" (mouseout)="mouseOut()" *ngIf="!disabled; else isDisabled">
+  <div *ngFor="let rating of ratings" (mouseover)="mouseOver(rating)" (click)="writeValue(rating)">
+    <mat-icon *ngIf="rating === 0" class="no-rating">not_interested</mat-icon>
+    <mat-icon *ngIf="rating !== 0">{{rating | ratingHighlight:ratingData}}</mat-icon>
+  </div>
+</div>
+
+<ng-template #isDisabled>
+  <div>
+    <mat-icon>not_interested</mat-icon>
+  </div>
+</ng-template>

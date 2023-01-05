@@ -1,0 +1,16 @@
+.ratings-container {
+  cursor: pointer;
+  display: flex;
+  gap: .7rem;
+  color: gold;
+  width: fit-content;
+
+  .mat-icon {
+    transform: scale(1.5);
+  }
+
+  .no-rating {
+    color: darkred;
+    transform: scale(1);
+  }
+}
